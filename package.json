@@ -1,0 +1,24 @@
+{
+  "name": "incubyte_tdd_assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "add.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shrivastavpush/Incubyte_TDD_Assessment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/shrivastavpush/Incubyte_TDD_Assessment/issues"
+  },
+  "homepage": "https://github.com/shrivastavpush/Incubyte_TDD_Assessment#readme",
+  "devDependencies": {
+    "jest": "^30.0.0"
+  }
+}
