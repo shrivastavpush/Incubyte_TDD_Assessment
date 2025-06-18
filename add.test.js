@@ -1,15 +1,25 @@
 const add = require('./add');
 
 describe('String Calculator', () => {
+
+    // point 1.1
     test('returns 0 for an empty string', () => {
         expect(add('')).toBe(0);
     });
 
+    // point 1.2
     test('returns the number for a single number', () => {
         expect(add('1')).toBe(1);
     });
 
+    // point 1.3
     test('returns the sum of two numbers separated by comma', () => {
         expect(add('2,2')).toBe(4);
+    });
+
+    // point 2
+    test('returns the sum of an unknown amount of numbers', () => {
+        expect(add('1,2,3,4,5')).toBe(15);
+        expect(add('10,20,30,40,50,60')).toBe(210);
     });
 });
