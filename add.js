@@ -32,7 +32,10 @@ function add(numbers) {
         throw new Error(`negatives not allowed: ${negatives.join(', ')}`);
     }
 
-    return numberArray.reduce((sum, num) => sum + num, 0);
+    // Ignore numbers greater than 1000 and sum the rest
+    return numberArray
+        .filter(num => num <= 1000)
+        .reduce((sum, num) => sum + num, 0);
 }
 
 module.exports = add;
