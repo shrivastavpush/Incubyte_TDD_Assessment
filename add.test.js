@@ -29,15 +29,18 @@ describe('String Calculator', () => {
         expect(add('10\n20\n30,40,50')).toBe(150);
     });
 
-    // point 4.1 - Custom delimiters
+    // point 4 - Custom delimiters
     test('supports custom delimiters', () => {
         expect(add('//;\n1;2')).toBe(3);
         expect(add('//|\n1|2|3')).toBe(6);
         expect(add('//\n\n1\n2')).toBe(3);  // Empty delimiter should default to newline
     });
 
-    // point 4.2 - Multiple delimiters
-    test('handles multiple delimiters', () => {
-        expect(add('1,2\n3')).toBe(6);  // Using default delimiters
+    // point 5 - Negative numbers
+    test('throws an exception for negative numbers', () => {
+        expect(() => add('-1')).toThrow('negatives not allowed: -1');
+        expect(() => add('2,-4,3,-5')).toThrow('negatives not allowed: -4, -5');
+        expect(() => add('-1,-2,-3')).toThrow('negatives not allowed: -1, -2, -3');
+        expect(() => add('//;\n1;-2;3')).toThrow('negatives not allowed: -2');
     });
 });
